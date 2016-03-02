@@ -1,12 +1,11 @@
 <div class="suggestion">
 	{{ post.title }}
 	{{ post.upvotes }}
-
+<!-- why didn't this change submit to github? -->
 	<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
-		{{ post.comments }}
-	<p>
-		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
-	</p>
+<p> {{ comment.body }}	</p>
+		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span>
+	
 	</div>
 	<form ng-submit="addComment()" style="margin-top: 50px">
 		<h3> Submit Your Comment </h3>

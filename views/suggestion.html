@@ -3,9 +3,9 @@
 	{{ post.upvotes }} </span>
 <!-- why didn't this change submit to github? -->
 	<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
-<p> {{ post.comment.body }}	</p>
+<p> {{ comment.body }}	</p>
 		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span>
-	{{ post.comment.upvotes }}
+	{{ comment.upvotes }}
 	</div>
 	<form ng-submit="addComment()" style="margin-top: 50px">
 		<h3> Submit Your Comment </h3>

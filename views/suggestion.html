@@ -1,6 +1,6 @@
 <div class="suggestion">
-	{{ post.title }}
-	{{ post.upvotes }}
+	<span> {{ post.title }}
+	{{ post.upvotes }} </span>
 <!-- why didn't this change submit to github? -->
 	<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
 <p> {{ comment.body }}	</p>
